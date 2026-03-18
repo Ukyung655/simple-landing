@@ -20,7 +20,6 @@
       --text: #f5f1e8;
       --muted: #b8b0a3;
       --point: #d8a95f;
-      --point-soft: rgba(216, 169, 95, 0.12);
       --accent: #78ffd6;
       --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
       --radius-xl: 36px;
@@ -79,6 +78,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 18px 0;
+      gap: 24px;
     }
 
     .logo {
@@ -96,6 +96,8 @@
       gap: 24px;
       color: var(--muted);
       font-size: 15px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -119,7 +121,8 @@
       padding-top: 70px;
     }
 
-    .hero-wrap {
+    .hero-wrap,
+    .split {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
       gap: 44px;
@@ -174,24 +177,26 @@
     .card p,
     .card li,
     .screen p,
-    .audience-item p,
     footer {
       color: var(--muted);
     }
 
-    .hero-title-top {
+    .hero-title-top,
+    .hero-title-accent,
+    .hero-title-bottom {
       display: block;
+    }
+
+    .hero-title-top {
       color: #ffffff;
     }
 
     .hero-title-accent {
-      display: block;
       color: var(--point);
       text-shadow: 0 0 24px rgba(216, 169, 95, 0.18);
     }
 
     .hero-title-bottom {
-      display: block;
       color: #e5ddd0;
     }
 
@@ -199,10 +204,6 @@
       max-width: 620px;
       margin-bottom: 34px;
       font-size: 18px;
-    }
-
-    .highlight {
-      color: var(--text);
     }
 
     .hero-actions {
@@ -245,126 +246,15 @@
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 760px;
-    }
-
-    .stat,
-    .card,
-    .phone,
-    .audience-item,
-    .cta-box {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: var(--radius-md);
-    }
-
-    .stat strong {
-      display: block;
-      margin-bottom: 2px;
-      font-size: 24px;
-      color: var(--point);
-    }
-
-    .stat span {
-      font-size: 14px;
-    }
-
-    .phone {
-      position: relative;
-      padding: 18px;
-      border-radius: 40px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
-    }
-
-    .phone::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(216, 169, 95, 0.24), rgba(255, 255, 255, 0.08));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .phone::after {
-      content: "";
-      position: absolute;
-      inset: 15px 28px auto;
-      height: 24px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .screen {
-      min-height: 680px;
-      padding: 28px;
-      border-radius: 30px;
-      background:
-        radial-gradient(circle at top right, rgba(216, 169, 95, 0.2), transparent 28%),
-        linear-gradient(180deg, #181716 0%, #0f0f0f 100%);
-      overflow: hidden;
-    }
-
-    .screen-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 16px;
-      margin-bottom: 26px;
-    }
-
-    .screen-title {
-      margin-bottom: 20px;
-      font-size: 30px;
-      line-height: 1.15;
-    }
-
-    .routine-card,
-    .ingredient-card,
-    .tip-card {
-      margin-bottom: 14px;
-      padding: 18px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .routine-card strong,
-    .ingredient-card strong,
-    .tip-card strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 16px;
-      color: #fff7eb;
-    }
-
-    .section-head {
-      margin-bottom: 34px;
-    }
-
-    .section-desc {
-      max-width: 760px;
-      font-size: 17px;
-    }
-
+    .hero-stats,
     .grid-3,
     .feature-grid {
       display: grid;
-      gap: 20px;
+      gap: 18px;
+    }
+
+    .hero-stats {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .grid-3 {
@@ -372,155 +262,156 @@
     }
 
     .feature-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .card {
-      position: relative;
-      padding: 30px;
+    .card,
+    .screen,
+    .phone,
+    .stat,
+    .cta-box {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .card,
+    .stat,
+    .cta-box {
       border-radius: var(--radius-lg);
-      overflow: hidden;
+      padding: 28px;
     }
 
-    .card::before,
-    .cta-box::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(216, 169, 95, 0.12), transparent 30%);
-      pointer-events: none;
-    }
-
-    .card h3 {
+    .card h3,
+    .feature-card h3 {
       margin-bottom: 12px;
-      color: #fff8ee;
-    }
-
-    .card ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .card li::before {
-      content: "• ";
-      color: var(--point);
-      font-weight: 800;
-    }
-
-    .feature-card {
-      min-height: 224px;
-      padding-top: 78px;
     }
 
     .feature-number {
-      position: absolute;
-      top: 26px;
-      left: 30px;
       display: inline-flex;
       width: 42px;
       height: 42px;
       align-items: center;
       justify-content: center;
-      border-radius: 14px;
-      background: rgba(216, 169, 95, 0.14);
-      color: var(--point);
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: rgba(120, 255, 214, 0.1);
+      color: var(--accent);
       font-weight: 800;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      gap: 22px;
-      align-items: start;
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
     }
 
-    .audience-box {
-      display: grid;
-      gap: 14px;
-    }
-
-    .audience-item {
-      padding: 22px;
-      border-radius: 22px;
-    }
-
-    .audience-item strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 18px;
-      color: #fff8ee;
-    }
-
-    .cta {
-      padding-bottom: 112px;
-    }
-
-    .cta-box {
-      position: relative;
-      padding: 46px;
-      border-radius: var(--radius-xl);
-      text-align: center;
-      background:
-        radial-gradient(circle at top left, rgba(216, 169, 95, 0.18), transparent 26%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
-    }
-
-    .cta-box p {
-      max-width: 720px;
-      margin: 0 auto 24px;
+    .section-desc {
       font-size: 17px;
     }
 
+    .phone {
+      padding: 16px;
+      border-radius: 36px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
+        #0d0d0d;
+    }
+
+    .screen {
+      min-height: 640px;
+      border-radius: 28px;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top, rgba(120, 255, 214, 0.08), transparent 36%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+        #111111;
+    }
+
+    .screen-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .screen-title {
+      margin-bottom: 24px;
+    }
+
+    .routine-card,
+    .ingredient-card,
+    .tip-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: var(--panel-strong);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .routine-card + .ingredient-card,
+    .ingredient-card + .tip-card,
+    .tip-card + .routine-card {
+      margin-top: 16px;
+    }
+
+    .routine-card strong,
+    .ingredient-card strong,
+    .tip-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      padding-bottom: 110px;
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 48px 32px;
+    }
+
     footer {
-      padding: 26px 0 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 24px 0 48px;
+      text-align: center;
       font-size: 14px;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 980px) {
       .hero-wrap,
       .split,
-      .grid-3,
       .feature-grid,
+      .grid-3,
       .hero-stats {
         grid-template-columns: 1fr;
       }
 
-      .phone {
-        max-width: 440px;
-        margin: 0 auto;
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .nav-links {
-        display: none;
+        justify-content: flex-start;
       }
     }
 
     @media (max-width: 640px) {
-      section {
-        padding: 72px 0;
-      }
-
-      .hero {
-        padding-top: 44px;
-      }
-
       .container {
         width: min(100% - 24px, 1180px);
       }
 
-      .hero-desc,
-      .section-desc,
-      .cta-box p {
-        font-size: 16px;
+      section {
+        padding: 74px 0;
+      }
+
+      .hero {
+        padding-top: 42px;
       }
 
       .card,
+      .stat,
       .cta-box,
-      .screen,
-      .stat {
+      .screen {
         padding: 22px;
       }
 
@@ -530,7 +421,7 @@
       }
 
       .screen {
-        min-height: 610px;
+        min-height: auto;
       }
     }
   </style>
@@ -538,12 +429,11 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="logo">Skin <span>PT</span></div>
+      <div class="logo">MEN<span>:VIEW</span></div>
       <nav class="nav-links">
-        <a href="#about">서비스 소개</a>
-        <a href="#features">주요 기능</a>
-        <a href="#value">핵심 가치</a>
-        <a href="#target">추천 대상</a>
+        <a href="#features">기능</a>
+        <a href="#how-it-works">이용방법</a>
+        <a href="#download">출시 알림 다운로드</a>
       </nav>
     </div>
   </header>
@@ -552,32 +442,31 @@
     <section class="hero">
       <div class="container hero-wrap">
         <div>
-          <div class="badge">Men's Daily Skin Care Guide</div>
+          <div class="badge">Men's Beauty Routine Platform</div>
           <h1>
             <span class="hero-title-top">내 얼굴에 맞는</span>
             <span class="hero-title-accent">맨즈 뷰티 루틴을</span>
             <span class="hero-title-bottom">한 번에</span>
           </h1>
           <p class="hero-desc">
-            MAN:VIEW는 남성 스킨케어를 과하게 설명하지 않습니다. 필요한 정보만 날카롭게 정리하고,
-            루틴 추천부터 성분 이해, 상담 연결까지 한 흐름으로 이어지는 프리미엄 케어 경험을 만듭니다.
+            진단하고, 추천받고, 기록하는 맨즈 뷰티 루틴.
           </p>
           <div class="hero-actions">
-            <a href="#features" class="btn btn-primary">주요 기능 보기</a>
-            <a href="#about" class="btn btn-secondary">서비스 소개</a>
+            <a href="#features" class="btn btn-primary">기능 보기</a>
+            <a href="#download" class="btn btn-secondary">출시 알림받기</a>
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <strong>4단계</strong>
-              <span>필요한 흐름만 남긴 관리 구조</span>
+              <strong>6가지 기능</strong>
+              <span>진단부터 콘텐츠까지 필요한 흐름만 압축</span>
             </div>
             <div class="stat">
-              <strong>정제된 추천</strong>
-              <span>피부 타입별 루틴 제안</span>
+              <strong>3단계 이용법</strong>
+              <span>확인하고, 받고, 기록하는 간단한 루틴</span>
             </div>
             <div class="stat">
-              <strong>브랜드 감도</strong>
-              <span>남성 중심의 세련된 UX</span>
+              <strong>MAN:VIEW</strong>
+              <span>당신에게 맞는 첫 맨즈 뷰티 가이드</span>
             </div>
           </div>
         </div>
@@ -589,54 +478,26 @@
               <div style="color: var(--muted); font-size: 13px;">MAN:VIEW</div>
             </div>
             <h3 class="screen-title">
-              오늘 컨디션에 맞는
+              지금 필요한 맨즈 뷰티 루틴을
               <br />
-              루틴을 바로 제안합니다
+              한 화면에서 확인하세요
             </h3>
             <div class="routine-card">
-              <strong>AM Routine</strong>
-              <p>저자극 클렌저, 밸런싱 토너, 진정 세럼, 선크림까지 군더더기 없는 아침 루틴을 안내합니다.</p>
+              <strong>피부상태진단</strong>
+              <p>내 피부 상태를 빠르게 확인합니다.</p>
             </div>
             <div class="ingredient-card">
-              <strong>성분 분석</strong>
-              <p>나이아신아마이드, 판테놀, 시카 중심으로 제품의 핵심 기능과 체감 포인트를 빠르게 보여줍니다.</p>
+              <strong>맞춤 제품 추천</strong>
+              <p>내게 맞는 제품만 바로 추천합니다.</p>
             </div>
             <div class="tip-card">
-              <strong>오늘의 가이드</strong>
-              <p>복잡한 설명 대신 필요한 액션만 남겨 초보자도 즉시 실천할 수 있도록 설계했습니다.</p>
+              <strong>루틴관리</strong>
+              <p>아침, 저녁 루틴을 쉽게 관리합니다.</p>
             </div>
             <div class="routine-card">
-              <strong>상담 연결</strong>
-              <p>루틴만으로 해결되지 않으면 제품 추천과 추가 상담으로 자연스럽게 이어집니다.</p>
+              <strong>변화추적리포트</strong>
+              <p>변화를 기록하고 한눈에 확인합니다.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">About MAN:VIEW</span>
-          <h2>정보는 넘치지만, 진짜 필요한 가이드는 드뭅니다</h2>
-          <p class="section-desc">
-            많은 남성 사용자가 피부 관리에 관심은 있지만 어떤 제품을 골라야 하는지, 어떤 순서로 써야 하는지,
-            무엇이 내 피부에 맞는지에서 막힙니다. MAN:VIEW는 그 복잡함을 줄이고 실제 행동으로 이어지는 관리 경험을 제공합니다.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>시작은 하고 싶은데</h3>
-            <p>필수 제품과 기본 순서를 몰라 첫 단계에서 멈추는 사용자가 많습니다.</p>
-          </div>
-          <div class="card">
-            <h3>제품은 많은데</h3>
-            <p>광고와 후기 사이에서 흔들리다 보면 결국 익숙한 제품만 반복해서 고르게 됩니다.</p>
-          </div>
-          <div class="card">
-            <h3>정보는 보이는데</h3>
-            <p>콘텐츠가 산발적이라 루틴이라는 형태로 연결되지 못하고 소비에서 끝나는 경우가 많습니다.</p>
           </div>
         </div>
       </div>
@@ -645,113 +506,79 @@
     <section id="features">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Core Features</span>
-          <h2>MAN:VIEW의 4가지 핵심 기능</h2>
-          <p class="section-desc">
-            배우고, 고르고, 적용하고, 필요하면 연결됩니다. 흐름이 끊기지 않는 것이 이 서비스의 핵심입니다.
-          </p>
+          <span class="eyebrow">Features</span>
+          <h2>기능</h2>
+          <p class="section-desc">핵심 기능만 빠르게 확인하세요.</p>
         </div>
 
         <div class="feature-grid">
           <div class="card feature-card">
             <div class="feature-number">01</div>
-            <h3>기본 가이드</h3>
-            <p>스킨케어에 처음 들어오는 사용자도 바로 이해할 수 있도록 제품 역할과 사용 순서를 정리합니다.</p>
+            <h3>피부상태진단</h3>
+            <p>피부 타입과 고민을 빠르게 확인합니다.</p>
           </div>
           <div class="card feature-card">
             <div class="feature-number">02</div>
-            <h3>성분 분석</h3>
-            <p>복잡한 성분표를 그대로 보여주지 않고, 핵심 성분과 기대 효과를 더 빠르게 읽히게 만듭니다.</p>
+            <h3>맞춤 제품 추천</h3>
+            <p>내 피부에 맞는 제품만 추천합니다.</p>
           </div>
           <div class="card feature-card">
             <div class="feature-number">03</div>
-            <h3>맞춤 루틴 설계</h3>
-            <p>피부 고민과 생활 패턴을 바탕으로 아침과 저녁에 실천 가능한 루틴을 제안합니다.</p>
+            <h3>루틴관리</h3>
+            <p>매일 실천할 루틴을 간단히 정리합니다.</p>
           </div>
           <div class="card feature-card">
             <div class="feature-number">04</div>
-            <h3>상담 연결</h3>
-            <p>자가 관리만으로 부족한 경우에는 제품 추천과 추가 상담으로 다음 행동까지 이어집니다.</p>
+            <h3>면도 후 케어 가이드</h3>
+            <p>면도 후 자극을 줄이는 케어를 안내합니다.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-number">05</div>
+            <h3>변화추적리포트</h3>
+            <p>피부 변화와 루틴 성과를 보여줍니다.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-number">06</div>
+            <h3>쉽고 간단한 뷰티 콘텐츠</h3>
+            <p>짧고 쉬운 콘텐츠로 바로 이해합니다.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="value">
-      <div class="container split">
-        <div class="card">
-          <span class="eyebrow">Value Proposition</span>
-          <h2>관리보다 라이프스타일에 가까운 케어 경험</h2>
-          <p class="section-desc" style="max-width: 100%; margin-top: 12px;">
-            MAN:VIEW는 단순한 제품 소개가 아니라, 사용자가 스스로 판단하고 관리할 수 있게 만드는 실전형 가이드입니다.
-          </p>
-        </div>
-
-        <div class="audience-box">
-          <div class="audience-item">
-            <strong>초보자도 따라올 수 있는 구조</strong>
-            <p>정보를 덜어내고 핵심만 남겨 처음 접하는 사용자도 부담 없이 시작할 수 있습니다.</p>
-          </div>
-          <div class="audience-item">
-            <strong>내 피부에 맞는 선택</strong>
-            <p>피부 타입과 고민 중심으로 루틴을 제안해 무작정 따라 하는 관리에서 벗어나게 합니다.</p>
-          </div>
-          <div class="audience-item">
-            <strong>이해하고 고르는 제품 경험</strong>
-            <p>성분과 목적을 함께 보여줘 제품을 왜 쓰는지 납득한 상태로 선택할 수 있게 합니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="target">
+    <section id="how-it-works">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Target User</span>
-          <h2>이런 사용자에게 특히 잘 맞습니다</h2>
-          <p class="section-desc">
-            루틴은 없지만 관리에 관심이 있고, 과장된 설명보다 간결하고 실용적인 가이드를 선호하는 사용자에게 적합합니다.
-          </p>
+          <span class="eyebrow">How It Works</span>
+          <h2>이용방법</h2>
+          <p class="section-desc">3단계로 바로 시작할 수 있습니다.</p>
         </div>
 
         <div class="grid-3">
           <div class="card">
-            <h3>스킨케어 입문자</h3>
-            <ul>
-              <li>무엇부터 시작해야 할지 모르는 사용자</li>
-              <li>필수 제품과 기본 순서를 먼저 익히고 싶은 사용자</li>
-            </ul>
+            <h3>Step 1. 현재 피부 상태 확인</h3>
+            <p>내 피부 타입과 고민을 확인합니다.</p>
           </div>
           <div class="card">
-            <h3>정보 피로가 큰 사용자</h3>
-            <ul>
-              <li>영상과 SNS 정보만으로는 판단이 어려운 사용자</li>
-              <li>자신에게 맞는 제품을 더 빠르게 찾고 싶은 사용자</li>
-            </ul>
+            <h3>Step 2. 개인 맞춤 루틴 받기</h3>
+            <p>나에게 맞는 제품과 순서를 받습니다.</p>
           </div>
           <div class="card">
-            <h3>간결한 루틴이 필요한 사용자</h3>
-            <ul>
-              <li>짧고 정확한 가이드를 선호하는 사용자</li>
-              <li>맞춤 루틴과 상담 연결까지 원하는 사용자</li>
-            </ul>
+            <h3>Step 3. 기록하고 개선하기</h3>
+            <p>기록을 바탕으로 루틴을 계속 개선합니다.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta">
+    <section id="download" class="cta">
       <div class="container">
         <div class="cta-box">
-          <span class="eyebrow">Start Your Daily Care</span>
-          <h2>복잡한 설명보다, 오늘 바로 쓰는 루틴이 중요합니다</h2>
-          <p>
-            MAN:VIEW와 함께라면 피부 관리는 더 이상 번거로운 숙제가 아닙니다.
-            지금 필요한 정보만 빠르게 확인하고, 감도 있는 관리 루틴을 시작해보세요.
-          </p>
+          <span class="eyebrow">Launch Alert</span>
+          <h2>출시 알림 다운로드</h2>
+          <p>당신의 첫 맨즈뷰티 루틴, MAN:VIEW에서 시작하세요.</p>
           <div class="hero-actions" style="justify-content: center; margin-bottom: 0;">
-            <a href="#about" class="btn btn-primary">서비스 소개 보기</a>
-            <a href="#features" class="btn btn-secondary">기능 자세히 보기</a>
+            <a href="#" class="btn btn-primary">출시 알림받기</a>
           </div>
         </div>
       </div>
