@@ -295,14 +295,12 @@
     .feature-grid,
     .problem-grid,
     .steps,
-    .review-wrap,
     .audience-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
     }
     .card,
-    .review,
     .audience-card,
     .problem-card,
     .difference-panel,
@@ -313,14 +311,12 @@
       box-shadow:var(--shadow-md);
     }
     .card,
-    .review,
     .audience-card,
     .problem-card{
       padding:24px;
       transition:transform .24s ease, box-shadow .24s ease, border-color .24s ease;
     }
     .card:hover,
-    .review:hover,
     .audience-card:hover,
     .problem-card:hover{
       transform:translateY(-6px);
@@ -342,7 +338,6 @@
     }
     .card h3,
     .problem-card h3,
-    .review h3,
     .audience-card h3{
       margin:0 0 8px;
       font-size:1.14rem;
@@ -441,7 +436,6 @@
     }
 
     .steps .card,
-    .review,
     .audience-card{
       height:100%;
     }
@@ -451,23 +445,6 @@
       color:var(--primary);
       font-weight:800;
       letter-spacing:.04em;
-    }
-
-    .review{
-      background:linear-gradient(180deg, #ffffff, #fbfdff);
-    }
-    .review p{
-      margin:0 0 18px;
-      color:#334155;
-    }
-    .review .name{
-      display:block;
-      font-weight:800;
-      color:#0f172a;
-    }
-    .review .meta{
-      color:var(--muted);
-      font-size:.92rem;
     }
 
     .signup-panel{
@@ -540,7 +517,6 @@
       .feature-grid,
       .problem-grid,
       .steps,
-      .review-wrap,
       .audience-grid,
       .cta-box{
         grid-template-columns:1fr;
@@ -606,11 +582,11 @@
       <div class="container hero-wrap">
         <div>
           <div class="eyebrow">남성 피부 고민을 루틴으로 연결하는 맞춤형 스킨케어 서비스</div>
-          <h1>복잡한 피부 고민을<br>간단한 관리 습관으로<br>바꿔주는 Skin PT</h1>
+          <h1>복잡한 피부 고민을<br>간단한 루틴으로 바꿔주는 Skin PT</h1>
           <p>
-            Skin PT는 피부 진단, 맞춤 루틴 추천, 실천 관리까지 한 번에 연결하는
-            남성 스킨케어 서비스입니다. 무엇을 발라야 할지 모르는 순간을 줄이고,
-            꾸준히 좋아지는 경험을 더 분명하게 만들어줍니다.
+            Skin PT는 피부 진단부터 맞춤 루틴 추천, 실천 관리까지 연결하는
+            남성 스킨케어 서비스입니다. 무엇을 발라야 할지 막막한 순간을 줄이고,
+            꾸준히 관리하는 흐름을 더 쉽게 만듭니다.
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#download">내 피부 루틴 먼저 받아보기</a>
@@ -695,10 +671,10 @@
       <div class="container problem-wrap">
         <div class="problem-intro">
           <div class="section-tag" style="color:#7dd3fc;">문제점 → 해결</div>
-          <h2>대부분의 남성 스킨케어는<br>정보는 많고 실행은 어렵습니다</h2>
+          <h2>대부분의 남성 스킨케어는<br>정보는 많고 실천은 어렵습니다</h2>
           <p>
-            제품은 넘치는데 무엇이 내 피부에 맞는지 모르고, 루틴은 복잡해서 오래 가지 않습니다.
-            Skin PT는 이 단절을 줄이기 위해 문제를 바로 행동으로 이어지는 구조로 바꿉니다.
+            제품은 많지만 내 피부에 맞는지 모르겠고, 루틴은 복잡해 오래가기 어렵습니다.
+            Skin PT는 이 흐름을 바로 실천으로 이어지게 바꿉니다.
           </p>
         </div>
         <div class="problem-grid">
@@ -731,7 +707,7 @@
         <div class="section-head">
           <div class="section-tag">기능</div>
           <h2>Skin PT의 핵심 기능은<br>복잡한 스킨케어를 단순하게 만듭니다</h2>
-          <p>처음 관리하는 사용자도 바로 이해하고 실천할 수 있도록 필요한 기능만 선명하게 정리했습니다.</p>
+          <p>처음 시작하는 사용자도 바로 이해하고 따라갈 수 있게 필요한 기능만 정리했습니다.</p>
         </div>
         <div class="feature-grid">
           <div class="card">
@@ -807,7 +783,7 @@
         <div class="section-head">
           <div class="section-tag">타겟 사용자</div>
           <h2>이런 사용자에게 특히 적합합니다</h2>
-          <p>스킨케어를 처음 시작하는 사람부터, 관리가 끊기기 쉬운 사용자까지 폭넓게 대응합니다.</p>
+          <p>처음 시작하는 사람부터 관리가 자주 끊기는 사용자까지 폭넓게 맞춥니다.</p>
         </div>
         <div class="audience-grid">
           <div class="audience-card">
@@ -830,7 +806,7 @@
       <div class="container">
         <div class="section-head">
           <div class="section-tag">이용 방법</div>
-          <h2>시작은 간단하고,<br>관리는 자연스럽게 이어집니다</h2>
+          <h2>시작은 간단하고<br>관리는 자연스럽게 이어집니다</h2>
           <p>복잡한 검색 없이 지금 내 피부에 필요한 관리만 빠르게 시작할 수 있습니다.</p>
         </div>
         <div class="steps">
@@ -857,32 +833,15 @@
       <div class="container">
         <div class="section-head">
           <div class="section-tag">출시 알림</div>
-          <h2>정식 오픈 전에 가장 먼저 소식을 받아보세요</h2>
+          <h2>정식 오픈 전에<br>가장 먼저 소식을 받아보세요</h2>
           <p>출시 일정과 초기 안내를 빠르게 받아볼 수 있도록 사전 신청 링크를 준비했습니다.</p>
         </div>
         <div class="signup-panel">
-          <p>지금 사전 신청해두면 Skin PT 출시 소식과 첫 사용 안내를 가장 먼저 확인할 수 있습니다.</p>
+          <p>지금 사전 신청하면 Skin PT 출시 소식과 첫 안내를 가장 먼저 받을 수 있습니다.</p>
           <div class="signup-actions">
             <a class="btn btn-primary" href="https://url.kr/u3mscg">출시 전에 우선 신청하기</a>
           </div>
           <div class="signup-note">외부 신청 링크로 이동해 간단히 등록할 수 있습니다.</div>
-        </div>
-        <div class="review-wrap" style="margin-top:22px;">
-          <div class="review">
-            <p>정보가 많을수록 오히려 시작이 어려웠는데, Skin PT는 무엇을 먼저 해야 하는지 한 번에 이해되도록 정리해줍니다.</p>
-            <span class="name">김민수</span>
-            <span class="meta">스킨케어 입문 사용자</span>
-          </div>
-          <div class="review">
-            <p>면도 후 붉어짐이 자주 있었는데, 상황에 맞는 루틴과 관리 순서가 보이면 훨씬 덜 헤매게 됩니다.</p>
-            <span class="name">박준형</span>
-            <span class="meta">민감 피부 사용자</span>
-          </div>
-          <div class="review">
-            <p>제품 추천만 많은 서비스보다 실제로 매일 따라 할 수 있는 루틴이 있는 점이 가장 설득력 있게 느껴집니다.</p>
-            <span class="name">이도윤</span>
-            <span class="meta">직장인 사용자</span>
-          </div>
         </div>
       </div>
     </section>
@@ -891,8 +850,8 @@
       <div class="container">
         <div class="cta-box">
           <div>
-            <h3>피부 관리를 미루는 시간을 줄이고<br>내게 맞는 루틴을 먼저 시작해보세요</h3>
-            <p>Skin PT는 어려운 설명보다 바로 실행할 수 있는 관리 경험에 집중합니다. 출시 전에 사전 신청하고 가장 먼저 시작할 기회를 확보하세요.</p>
+            <h3>피부 관리를 미루지 말고<br>내게 맞는 루틴부터 시작해보세요</h3>
+            <p>Skin PT는 어려운 설명보다 바로 실행할 수 있는 관리 경험에 집중합니다. 출시 전에 신청하고 가장 먼저 시작해보세요.</p>
           </div>
           <a class="btn btn-primary" href="https://url.kr/u3mscg">지금 사전 신청하고 먼저 시작하기</a>
         </div>
