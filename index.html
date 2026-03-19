@@ -324,8 +324,9 @@
       box-shadow:0 22px 42px rgba(15,23,42,.10);
     }
     .icon{
-      width:52px;
+      min-width:78px;
       height:52px;
+      padding:0 14px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -333,8 +334,9 @@
       border-radius:16px;
       background:linear-gradient(135deg, #eff6ff, #ecfeff);
       color:#0f4fb8;
-      font-size:1.25rem;
+      font-size:1rem;
       font-weight:800;
+      white-space:nowrap;
     }
     .card h3,
     .problem-card h3,
@@ -396,6 +398,13 @@
       margin-bottom:8px;
       color:var(--primary);
       font-size:.92rem;
+    }
+    .problem-card.solution{
+      border-color:rgba(125,211,252,.9);
+      background:linear-gradient(180deg, #f0f9ff, #ffffff);
+    }
+    .problem-card.solution strong{
+      color:#0891b2;
     }
 
     .difference-panel{
@@ -671,32 +680,32 @@
       <div class="container problem-wrap">
         <div class="problem-intro">
           <div class="section-tag" style="color:#7dd3fc;">문제점 → 해결</div>
-          <h2>대부분의 남성 스킨케어는<br>정보는 많고 실천은 어렵습니다</h2>
+          <h2>복잡한 피부 고민,<br>간단한 루틴으로</h2>
           <p>
-            제품은 많지만 내 피부에 맞는지 모르겠고, 루틴은 복잡해 오래가기 어렵습니다.
-            Skin PT는 이 흐름을 바로 실천으로 이어지게 바꿉니다.
+            정보는 많지만 내 피부에 맞는 선택과 실천은 더 어렵습니다.
+            Skin PT는 문제를 바로 연결되는 해결 루틴으로 바꿔줍니다.
           </p>
         </div>
         <div class="problem-grid">
           <div class="problem-card">
             <strong>문제 01</strong>
-            <h3>무엇부터 써야 할지 모르겠습니다</h3>
-            <p>피부 타입, 성분, 제품 종류가 복잡해서 시작 단계에서 이탈하기 쉽습니다.</p>
+            <h3>무엇부터 해야 할지 모르겠습니다</h3>
+            <p>피부 타입, 성분, 제품 종류가 복잡해서 시작 단계에서 멈추기 쉽습니다.</p>
           </div>
-          <div class="problem-card">
+          <div class="problem-card solution">
             <strong>해결 01</strong>
-            <h3>현재 상태 기준으로 루틴을 바로 제안합니다</h3>
-            <p>진단 결과를 바탕으로 지금 필요한 순서와 관리 포인트만 간결하게 보여줍니다.</p>
+            <h3>현재 상태 기준으로 바로 루틴을 제안합니다</h3>
+            <p>진단 결과를 바탕으로 지금 필요한 순서와 관리 포인트만 간단하게 보여줍니다.</p>
           </div>
           <div class="problem-card">
             <strong>문제 02</strong>
-            <h3>좋은 정보를 봐도 실천이 이어지지 않습니다</h3>
+            <h3>좋은 정보를 알아도 실천이 이어지지 않습니다</h3>
             <p>루틴이 길고 어렵게 느껴지면 며칠 안에 중단되는 경우가 많습니다.</p>
           </div>
-          <div class="problem-card">
+          <div class="problem-card solution">
             <strong>해결 02</strong>
-            <h3>짧고 현실적인 루틴으로 습관화를 돕습니다</h3>
-            <p>아침과 저녁에 맞춘 최소 단계 구성으로 꾸준히 관리할 수 있게 설계했습니다.</p>
+            <h3>짧고 현실적인 루틴으로 꾸준함을 만듭니다</h3>
+            <p>아침과 저녁에 맞춘 최소 단계 구성으로 끝까지 관리할 수 있게 설계했습니다.</p>
           </div>
         </div>
       </div>
@@ -833,27 +842,15 @@
       <div class="container">
         <div class="section-head">
           <div class="section-tag">출시 알림</div>
-          <h2>정식 오픈 전에<br>가장 먼저 소식을 받아보세요</h2>
-          <p>출시 일정과 초기 안내를 빠르게 받아볼 수 있도록 사전 신청 링크를 준비했습니다.</p>
+          <h2>정식 출시 전에<br>가장 먼저 소식 받아보세요</h2>
+          <p>출시 일정과 초기 안내를 한 번에 받을 수 있도록 사전 신청 링크를 준비했습니다.</p>
         </div>
         <div class="signup-panel">
-          <p>지금 사전 신청하면 Skin PT 출시 소식과 첫 안내를 가장 먼저 받을 수 있습니다.</p>
+          <p>지금 사전 신청하시면 Skin PT 출시 소식과 초기 안내를 가장 먼저 받아보실 수 있습니다.</p>
           <div class="signup-actions">
             <a class="btn btn-primary" href="https://url.kr/u3mscg">출시 전에 우선 신청하기</a>
           </div>
-          <div class="signup-note">외부 신청 링크로 이동해 간단히 등록할 수 있습니다.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="download">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h3>피부 관리를 미루지 말고<br>내게 맞는 루틴부터 시작해보세요</h3>
-            <p>Skin PT는 어려운 설명보다 바로 실행할 수 있는 관리 경험에 집중합니다. 출시 전에 신청하고 가장 먼저 시작해보세요.</p>
-          </div>
-          <a class="btn btn-primary" href="https://url.kr/u3mscg">지금 사전 신청하고 먼저 시작하기</a>
+          <div class="signup-note">외부 신청 링크로 이동해 간단히 등록하실 수 있습니다.</div>
         </div>
       </div>
     </section>
